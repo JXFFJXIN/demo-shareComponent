@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="wapper">
+        <h3>弹出分享层</h3>
+        <div class="demo">
+            <a href="javascript:void(0)" class="share">分享DEMO</a>
+        </div>
+    </div>
+
+    <!-- 弹出分享层 -->
+
+    <div class="shade">
+        <div class="shareBox">
+            <!-- 上面部分 -->
+            <div class="shareContent-top">
+                <span>分享到各大社区</span>
+                <a href="javascript:void(0)" id="close"></a>
+            </div>
+            <!-- 下面总体部分 -->
+            <div class="shareContent">
+                <ul>
+                    <li title="分享到QQ空间"><a href="#" class="share1"></a><span></span></li>
+                    <li title="分享到微博"><a href="#" class="share2"></a><span></span></li>
+                    <li title="分享到人人网"><a href="#" class="share3"></a><span></span></li>
+                    <li title="分享到微信"><a href="#" class="share4"></a><span></span></li>
+                    <li title="分享到腾讯微博"><a href="#" class="share5"></a><span></span></li>
+                    <li title="分享到github"><a href="#" class="share6"></a><span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            var showBtn = document.getElementsByClassName('share')[0];
+            var showNode = document.getElementsByClassName('shade')[0];
+            var closeNode = document.getElementById('close');
+            showBtn.onclick = function(){
+                showNode.style.display = 'block';
+                closeNode.onclick = function(){
+                    showNode.style.display = 'none'; 
+                }
+            }
+
+
+
+        })()
+    
+    </script>
+</body>
+
+</html>
